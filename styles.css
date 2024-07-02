@@ -72,6 +72,56 @@ ul {
     color: black;
 }
 
+.ham-menu {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .ham-menu{
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        border-radius: 25px;
+        top: 50%;
+        left: 50%;
+    }
+    
+    .ham-menu span:nth-child(1){
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3){
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .ham-menu.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+}
+
 /* Hero Section */
 
 .hero-content {
@@ -249,6 +299,25 @@ ul {
     z-index: 1;
     animation: slideInRight 2s ease-out;
 }
+@media only screen and (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+    }
+    .service {
+        animation: none;
+    }
+    .service:nth-child(1) {
+        animation: none;
+    }
+    .service:nth-child(2) {
+        margin-top: 0;
+        animation: none;
+    }
+    .service:nth-child(3) {
+        animation: none;
+    }
+
+}
 
 /* Contact Us Section */
 .contact-container {
@@ -331,6 +400,12 @@ ul {
 
 .contact-form button.btn:hover {
     background-color: #3432c5;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-form {
+        margin-left: 20px;
+    }
 }
 
 /* Footer Section */
