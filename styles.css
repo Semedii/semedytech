@@ -79,48 +79,62 @@ ul {
 
 
 @media only screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .ham-menu{
-        display: block;
-        height: 50px;
-        width: 50px;
-        margin-left: auto;
-        position: relative;
+        .nav-links {
+            display: none; /* Initially hide the nav links */
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 50%;
+            height: 100vh;
+            background-color: rgb(5, 5, 124);
+            text-align: center;
+        }
+    
+        .nav-links.active {
+            display: block; /* Show the nav links when active */
+        }
+    
+        .nav-links li {
+            display: block;
+            margin: 10px 0;
+        }
+    
+        .ham-menu.active + .nav-links {
+            display: block; /* Show nav links when hamburger menu is active */
+        }
+    
+        .ham-menu {
+            display: block;
+            height: 50px;
+            width: 50px;
+            margin-left: auto;
+            position: relative;
+            cursor: pointer; /* Add cursor pointer for better UX */
+        }
+    
+        .ham-menu span {
+            height: 5px;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            border-radius: 25px;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+    
+        .ham-menu span:nth-child(1) {
+            top: 25%;
+        }
+        
+    
+        .ham-menu span:nth-child(2) {
+            top: 50%;
+        }
+    
+        .ham-menu span:nth-child(3) {
+            top: 75%;
+        }
     }
     
-    .ham-menu span {
-        height: 5px;
-        width: 100%;
-        background-color: white;
-        position: absolute;
-        border-radius: 25px;
-        top: 50%;
-        left: 50%;
-    }
-    
-    .ham-menu span:nth-child(1){
-        top: 25%;
-    }
-    .ham-menu span:nth-child(3){
-        top: 75%;
-    }
-
-    .ham-menu.active span:nth-child(1){
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .ham-menu.active span:nth-child(2){
-        opacity: 0;
-    }
-
-    .ham-menu.active span:nth-child(3){
-        top: 50%;
-        transform: translate(-50%, 50%) rotate(-45deg);
-    }
-}
 
 /* Hero Section */
 

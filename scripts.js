@@ -1,47 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const services = document.querySelectorAll('.service');
+    const services = document.querySelectorAll('.service');
+    const hamMenu = document.querySelector('.ham-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-  // Function to check if an element is in the viewport
-  function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-  }
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-  // Function to add the 'animate' class to services in the viewport
-  function addAnimationClass() {
-      services.forEach(service => {
-          if (isInViewport(service)) {
-              service.classList.add('animate');
-          }
-      });
-  }
+    // Function to add the 'animate' class to services in the viewport
+    function addAnimationClass() {
+        services.forEach(service => {
+            if (isInViewport(service)) {
+                service.classList.add('animate');
+            }
+        });
+    }
 
-  // Add event listeners for scrolling and navigation clicks
-  window.addEventListener('scroll', addAnimationClass);
+    // Add event listener for scroll events
+    window.addEventListener('scroll', addAnimationClass);
 
-  document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', (event) => {
-          const targetId = link.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-              event.preventDefault();
-              window.scrollTo({
-                  top: targetElement.offsetTop,
-                  behavior: 'smooth'
-              });
+    // Function to toggle 'active' class on ham-menu and nav-links
+    function toggleNav() {
+        hamMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    }
 
-              setTimeout(() => {
-                  addAnimationClass();
-              }, 1000); // Adjust timeout if needed based on scroll animation duration
-          }
-      });
-  });
+    // Add event listener for ham-menu click
+    hamMenu.addEventListener('click', toggleNav);
 
-  // Initial check on page load
-  addAnimationClass();
+    // Add event listeners for navigation links to close the menu on click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            toggleNav(); // Close the menu
+            setTimeout(() => {
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300); // Adjust timeout if needed based on animation timing
+        });
+    });
+
+    // Initial check on page load
+    addAnimationClass();
 });
