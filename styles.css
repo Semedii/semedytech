@@ -79,62 +79,71 @@ ul {
 
 
 @media only screen and (max-width: 768px) {
-        .nav-links {
-            display: none; /* Initially hide the nav links */
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            width: 50%;
-            height: 100vh;
-            background-color: rgb(5, 5, 124);
-            text-align: center;
-        }
-    
-        .nav-links.active {
-            display: block; /* Show the nav links when active */
-        }
-    
-        .nav-links li {
-            display: block;
-            margin: 10px 0;
-        }
-    
-        .ham-menu.active + .nav-links {
-            display: block; /* Show nav links when hamburger menu is active */
-        }
-    
-        .ham-menu {
-            display: block;
-            height: 50px;
-            width: 50px;
-            margin-left: auto;
-            position: relative;
-            cursor: pointer; /* Add cursor pointer for better UX */
-        }
-    
-        .ham-menu span {
-            height: 5px;
-            width: 100%;
-            background-color: white;
-            position: absolute;
-            border-radius: 25px;
-            transition: transform 0.3s ease; /* Add transition for smooth animation */
-        }
-    
-        .ham-menu span:nth-child(1) {
-            top: 25%;
-        }
-        
-    
-        .ham-menu span:nth-child(2) {
-            top: 50%;
-        }
-    
-        .ham-menu span:nth-child(3) {
-            top: 75%;
-        }
+    .navbar {
+        z-index: 4;
     }
-    
+
+    .nav-links {
+        display: none;
+        /* Initially hide the nav links */
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(5, 5, 124);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: block;
+        /* Show the nav links when active */
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .ham-menu.active+.nav-links {
+        display: block;
+        /* Show nav links when hamburger menu is active */
+    }
+
+    .ham-menu {
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+        cursor: pointer;
+        /* Add cursor pointer for better UX */
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        border-radius: 25px;
+        transition: transform 0.3s ease;
+        /* Add transition for smooth animation */
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+
+    .ham-menu span:nth-child(2) {
+        top: 50%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+}
+
 
 /* Hero Section */
 
@@ -184,6 +193,7 @@ ul {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -195,6 +205,7 @@ ul {
         transform: translateX(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -206,6 +217,7 @@ ul {
         transform: translateY(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -258,7 +270,8 @@ ul {
 
 .container p {
     font-size: 18px;
-    color: rgb(10, 10, 128);;
+    color: rgb(10, 10, 128);
+    ;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -276,10 +289,11 @@ ul {
     height: 350px;
     width: 350px;
     box-shadow: 10px 10px 30px rgb(2, 2, 71);
-    
-    background: linear-gradient(135deg, #1c156e, #b6fbff); 
+
+    background: linear-gradient(135deg, #1c156e, #b6fbff);
     border-radius: 10px;
-    margin: 20px 0; /* Margin to create space between services */
+    margin: 20px 0;
+    /* Margin to create space between services */
     z-index: 1;
     animation: slideInRight 2s ease-out;
 }
@@ -287,7 +301,7 @@ ul {
 .service h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color:white;
+    color: white;
 }
 
 .service p {
@@ -313,20 +327,25 @@ ul {
     z-index: 1;
     animation: slideInRight 2s ease-out;
 }
+
 @media only screen and (max-width: 768px) {
     .services-grid {
         flex-direction: column;
     }
+
     .service {
         animation: none;
     }
+
     .service:nth-child(1) {
         animation: none;
     }
+
     .service:nth-child(2) {
         margin-top: 0;
         animation: none;
     }
+
     .service:nth-child(3) {
         animation: none;
     }
@@ -369,7 +388,7 @@ ul {
     flex-direction: column;
     gap: 20px;
     text-align: left;
-    background: linear-gradient(135deg, #5872f4, #1c156e); 
+    background: linear-gradient(135deg, #5872f4, #1c156e);
     padding: 40px;
     border-radius: 10px;
     margin-right: 30px;
@@ -391,7 +410,7 @@ ul {
     align-self: center;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     padding: 10px;
     font-size: 16px;
@@ -455,21 +474,25 @@ ul {
     opacity: 0.8;
 }
 
-.footer-links h3, .footer-social h3 {
+.footer-links h3,
+.footer-social h3 {
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.footer-links ul, .footer-social ul {
+.footer-links ul,
+.footer-social ul {
     list-style-type: none;
     padding: 0;
 }
 
-.footer-links li, .footer-social li {
+.footer-links li,
+.footer-social li {
     margin-bottom: 5px;
 }
 
-.footer-links a, .footer-social a {
+.footer-links a,
+.footer-social a {
     color: white;
     text-decoration: none;
 }
@@ -498,7 +521,8 @@ ul {
 .box {
     width: 100px;
     height: 100px;
-    background: linear-gradient(to right, rgb(83, 93, 236), rgb(1, 1, 35));;
+    background: linear-gradient(to right, rgb(83, 93, 236), rgb(1, 1, 35));
+    ;
     animation: zigzag 50s linear infinite;
     position: absolute;
     color: rgb(14, 13, 13);
@@ -522,17 +546,21 @@ ul {
 }
 
 @keyframes zigzag {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(50vw, 50vh);
     }
+
     50% {
         transform: translate(-50vw, -50vh);
     }
+
     75% {
         transform: translate(-50vw, 50vh);
     }
 }
-
