@@ -33,6 +33,8 @@ ul {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
+    position: fixed;
+    width: 100%;
 }
 
 .brand {
@@ -157,7 +159,7 @@ ul {
 
 .hero .btn {
     display: inline-block;
-    margin-left:10%;
+    margin-left: 10%;
     padding: 15px 30px;
     background-color: rgb(16, 16, 132);
     color: white;
@@ -187,7 +189,7 @@ ul {
 
 .container h2 {
     font-size: 36px;
-    color: #333;
+    color: rgb(15, 15, 158);
     margin-bottom: 20px;
 }
 
@@ -198,60 +200,110 @@ ul {
     margin-bottom: 30px;
 }
 
+/* Services Section */
 .services-grid {
-    position: relative;
     display: flex;
-    justify-content: space-around;
     gap: 30px;
+    align-items: center;
 }
 
 .service {
-    margin-right: 60%;
     text-align: center;
     padding: 30px;
     height: 350px;
-    width: 300px;
+    width: 350px;
     box-shadow: 10px 10px 30px rgb(2, 2, 71);
-    background-color: #fff;
+    background: linear-gradient(135deg, #1c156e, #b6fbff); 
     border-radius: 10px;
-    position: absolute;
-    flex: 1;
+    margin: 20px 0; /* Margin to create space between services */
     z-index: 1;
-    animation: slideInLeft 2s ease-out;
+    animation: slideInRight 2s ease-out;
 }
 
 .service h3 {
-    
     font-size: 24px;
     margin-bottom: 10px;
-    color: rgb(1, 1, 35)
+    color: rgb(1, 1, 35);
 }
 
 .service p {
-    
-    font-size: 16px;
-    color: #666;
+    text-align: center;
+    font-size: 18px;
+    color: #e9dddd;
 }
 
-.service:nth-child(1){
-    margin-left: 70%;
-    box-shadow: 0px 30px 30px rgb(2, 2, 71);
-    margin-top: 5%; /* Adjust margin-top for the second service */
-    z-index: 2; /* Bring the middle service to the front */
-    top: 40px; /* Adjust top position to overlap */
-    animation: slideInUp 2s ease-out;
+.service:nth-child(1) {
+    z-index: 3;
+    animation: slideInLeft 2s ease-out;
+    background: linear-gradient(135deg, #b6fbff, #1c156e);
 }
 
 .service:nth-child(2) {
-    box-shadow: 10px 10px 30px rgb(2, 2, 71);
-    margin-left: 140%;
-   height: 350px;
-   animation: slideInRight 2s ease-out;
-}
-/* Add this class for animated appearance */
-.service.animate {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 20%;
+    box-shadow: 0px 0px 40px rgb(2, 2, 71);
+    z-index: 3;
+    animation: slideInUp 2s ease-out;
 }
 
+.service:nth-child(3) {
+    z-index: 1;
+    animation: slideInRight 2s ease-out;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-brand h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.footer-brand p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.footer-links h3, .footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 5px;
+}
+
+.footer-links a, .footer-social a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
