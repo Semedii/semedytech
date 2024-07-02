@@ -276,6 +276,17 @@ ul {
     margin-bottom: 30px;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .hero-content .description {
+        width: 100%;
+    }
+    .hero-content {
+    flex-direction: column;
+    height: 150vh;
+    }
+
+}
 /* Services Section */
 .services-grid {
     display: flex;
