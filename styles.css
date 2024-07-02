@@ -28,7 +28,7 @@ ul {
     padding: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    background-color: rgb(5, 5, 124);
+    background-color: rgb(49, 124, 229);
     color: white;
     position: fixed;
     width: 100%;
@@ -91,7 +91,7 @@ ul {
         left: 0%;
         width: 100%;
         height: 100vh;
-        background-color: rgb(5, 5, 124);
+        background-color: rgb(49, 124, 229);
         text-align: center;
     }
 
@@ -167,7 +167,7 @@ ul {
     text-align: center;
     padding-top: 15%;
     animation: slideInLeft 6s ease-out;
-    background-color: rgb(5, 5, 124);
+    background-color: rgb(49, 124, 229);
     color: white;
     width: 55%;
     height: 100%;
@@ -248,6 +248,7 @@ ul {
 
 .hero-content .btn:hover {
     background-color: #3432c5;
+    color: white;
 }
 
 /* Sections */
@@ -264,14 +265,13 @@ ul {
 
 .container h2 {
     font-size: 36px;
-    color: rgb(15, 15, 158);
+    color: rgb(49, 124, 229);
     margin-bottom: 20px;
 }
 
 .container p {
     font-size: 18px;
-    color: rgb(10, 10, 128);
-    ;
+    color: black;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -289,8 +289,7 @@ ul {
     height: 350px;
     width: 350px;
     box-shadow: 10px 10px 30px rgb(2, 2, 71);
-
-    background: linear-gradient(135deg, #1c156e, #b6fbff);
+    background: linear-gradient(135deg,    rgb(40, 109, 204), rgb(78, 144, 236));
     border-radius: 10px;
     margin: 20px 0;
     /* Margin to create space between services */
@@ -313,11 +312,11 @@ ul {
 .service:nth-child(1) {
     z-index: 3;
     animation: slideInLeft 2s ease-out;
-    background: linear-gradient(135deg, #b6fbff, #1c156e);
+    background: linear-gradient(135deg,   rgb(78, 144, 236), rgb(40, 109, 204));
 }
 
 .service:nth-child(2) {
-    margin-top: 20%;
+    margin-top: 25%;
     box-shadow: 0px 0px 40px rgb(2, 2, 71);
     z-index: 3;
     animation: slideInUp 2s ease-out;
@@ -373,13 +372,13 @@ ul {
 .contact-info h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: rgb(10, 10, 128);
+    color: rgb(49, 124, 229);
 }
 
 .contact-info p {
     font-size: 18px;
     margin-bottom: 10px;
-    color: rgb(10, 10, 128);
+    color: black
 }
 
 .contact-form {
@@ -388,7 +387,7 @@ ul {
     flex-direction: column;
     gap: 20px;
     text-align: left;
-    background: linear-gradient(135deg, #5872f4, #1c156e);
+    background: rgb(49, 124, 229);
     padding: 40px;
     border-radius: 10px;
     margin-right: 30px;
@@ -452,7 +451,7 @@ ul {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 800px;
     margin: 0 auto;
     gap: 20px;
@@ -474,93 +473,26 @@ ul {
     opacity: 0.8;
 }
 
-.footer-links h3,
-.footer-social h3 {
+.footer-links h3 { 
+    display: flex;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.footer-links ul,
-.footer-social ul {
+.footer-links ul {
     list-style-type: none;
     padding: 0;
 }
 
-.footer-links li,
-.footer-social li {
+.footer-links li {
     margin-bottom: 5px;
 }
 
-.footer-links a,
-.footer-social a {
+.footer-links a {
     color: white;
     text-decoration: none;
 }
 
-.footer-social a {
-    margin: 0 10px;
-}
-
 .footer-bottom {
     margin-top: 20px;
-}
-
-
-.info-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to right, rgb(83, 93, 236), rgb(1, 1, 35));
-    ;
-    animation: zigzag 50s linear infinite;
-    position: absolute;
-    color: rgb(14, 13, 13);
-    padding-top: 20%;
-}
-
-.box:nth-child(1) {
-    top: 20px;
-    left: 20px;
-}
-
-.box:nth-child(2) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.box:nth-child(3) {
-    bottom: 20px;
-    right: 20px;
-}
-
-@keyframes zigzag {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    25% {
-        transform: translate(50vw, 50vh);
-    }
-
-    50% {
-        transform: translate(-50vw, -50vh);
-    }
-
-    75% {
-        transform: translate(-50vw, 50vh);
-    }
 }
