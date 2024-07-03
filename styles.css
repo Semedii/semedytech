@@ -281,10 +281,22 @@ ul {
     .hero-content .description {
         margin-top: 10%;
         width: 100%;
+        color: rgb(49, 124, 229);
+        background-color: white;
     }
     .hero-content {
     flex-direction: column;
     height: 150vh;
+
+    }
+
+    .hero-content .portfolioScreen {
+        position: absolute;
+        top: 75%;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Make portfolioScreen cover the entire .hero-content */
+        /* z-index: 2;  */
     }
 
 }
