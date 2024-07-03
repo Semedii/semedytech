@@ -38,10 +38,16 @@ ul {
 
 .brand-logo img{
     height: auto;
-    width: 15%;
+    width: 25%;
     position: absolute;
     margin-left: 80px;
+    margin-top: -2%;
+    animation: slideInLeft 6s ease-out;
+}
+.brand-logo.small img {
+    width: 15%;
     margin-top: -2.82%;
+    
 }
 
 .nav-links {

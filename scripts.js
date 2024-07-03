@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const services = document.querySelectorAll('.service');
     const hamMenu = document.querySelector('.ham-menu');
     const navLinks = document.querySelector('.nav-links');
+    const brandLogo = document.getElementById('brand-logo');
+    const sections = document.querySelectorAll('section');
+    const homeSection = document.getElementById('home');
 
     // Function to check if an element is in the viewport
     function isInViewport(element) {
@@ -24,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add event listener for scroll events
-    window.addEventListener('scroll', addAnimationClass);
+    window.addEventListener('scroll', () => {
+        addAnimationClass();
+        adjustLogoSize();
+    });
 
     // Function to toggle 'active' class on ham-menu and nav-links
     function toggleNav() {
@@ -52,6 +58,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Intersection Observer callback
+    function handleIntersect(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.id === 'home') {
+                    brandLogo.classList.remove('small');
+                } else {
+                    brandLogo.classList.add('small');
+                }
+            }
+        });
+    }
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleIntersect, {
+        threshold: 0.5
+    });
+
+    // Observe all sections
+    sections.forEach(section => observer.observe(section));
+
+    // Function to adjust logo size based on current section visibility
+    function adjustLogoSize() {
+        if (isInViewport(homeSection)) {
+            brandLogo.classList.remove('small');
+        } else {
+            brandLogo.classList.add('small');
+        }
+    }
+
     // Initial check on page load
     addAnimationClass();
+    adjustLogoSize();
+
+    // Check if the user is on the homepage
+    const checkHomePage = () => {
+        if (window.location.hash === '#home' || window.location.hash === '' || window.location.pathname === '/') {
+            brandLogo.classList.remove('small');
+        } else {
+            brandLogo.classList.add('small');
+        }
+    };
+
+    // Add event listener for hash change and page load
+    window.addEventListener('hashchange', checkHomePage);
+    window.addEventListener('load', checkHomePage);
 });

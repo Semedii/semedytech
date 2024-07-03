@@ -9,8 +9,8 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="brand-logo">
-               <img src="images/logo_blue.jpg" alt="">
+            <div class="brand-logo" id="brand-logo">
+                <img src="images/logo_blue.jpg" alt="RDCoders Logo">
             </div>
             <div class="ham-menu">
                 <span></span>
@@ -23,19 +23,19 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
-            
+
         </nav>
-  <!-- Hero Section -->
-    <div class="hero-content" id="home">
-        <div class="description">
-            <h2>Crafting Captivating Web Experiences</h2>
-            <p>Fully Custom Websites: No WordPress, No Templates. 100% hand-Coded Exclusively for You!</p>
-            <a href="#contact" class="btn">GET IN TOUCH!</a>
+        <!-- Hero Section -->
+        <div class="hero-content" id="home">
+            <div class="description">
+                <h2>Crafting Captivating Web Experiences</h2>
+                <p>Fully Custom Websites: No WordPress, No Templates. 100% hand-Coded Exclusively for You!</p>
+                <a href="#contact" class="btn">GET IN TOUCH!</a>
+            </div>
+            <div class="portfolioScreen">
+                <img src="images/portfolio_screens.jpg" alt="Portfolio showcase">
+            </div>
         </div>
-        <div class="portfolioScreen">
-            <img src="images/portfolio_screens.jpg" alt="Portfolio showcase">
-        </div>
-    </div>
 
     </header>
 
@@ -70,39 +70,39 @@
     </section>
 
     <!-- Contact Us Section -->
-<section id="contact" class="section">
-    <div class="full-width">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p><strong>Address:</strong> Hargeisa Main Road 1</p>
-                <p><strong>Phone:</strong> +905525111172</p>
-                <p><strong>Email:</strong> info@rdcoders.com</p>
-                <p><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
+    <section id="contact" class="section">
+        <div class="full-width">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>Address:</strong> Hargeisa Main Road 1</p>
+                    <p><strong>Phone:</strong> +905525111172</p>
+                    <p><strong>Email:</strong> info@rdcoders.com</p>
+                    <p><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
+                </div>
+                <form action="submit_form.php" method="post" class="contact-form">
+                    <h2>Contact Us</h2>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
-            <form action="submit_form.php" method="post" class="contact-form">
-                <h2>Contact Us</h2>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -138,7 +138,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="scripts.js"></script>
 </body>
 </html>
