@@ -533,60 +533,29 @@ ul {
 }
 
 /* Footer Section */
-.footer {
-    background-color: rgb(1, 1, 35);
-    color: white;
-    padding: 40px 0;
+
+footer {
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background-color: #003366;
+    color: #fff;
     text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-brand {
-    text-align: left;
-}
-
-.footer-brand h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-.footer-brand p {
-    margin: 5px 0 0;
-    font-size: 16px;
-    opacity: 0.8;
-}
-
-.footer-links h3 { 
-    display: flex;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 5px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-bottom {
+footer .social-links {
     margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2412c9; /* Change color on hover */
 }
 
 
@@ -622,7 +591,9 @@ body.dark-theme {
     background: #181c21;
 }
 
-.dark-theme .footer {
+.dark-theme footer {
     background-color: #181c21;
 }
+
+
 
