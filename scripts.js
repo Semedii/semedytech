@@ -108,23 +108,37 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', checkHomePage);
 
     // JavaScript for Theme Toggle
-    themeSwitch.addEventListener('change', function() {
-        if (this.checked) {
-            // Dark theme
-            document.body.classList.add('dark-theme');
-            logoImg.src = 'images/logo_black.jpg'; // Change logo to dark theme
+    function applyDarkTheme() {
+        document.body.classList.add('dark-theme');
+        logoImg.src = 'images/logo_black.jpg'; // Change logo to dark theme
+    }
+
+    function applyLightTheme() {
+        document.body.classList.remove('dark-theme');
+        logoImg.src = 'images/logo_blue.jpg'; // Change logo to light theme
+    }
+
+    function handleThemeChange() {
+        if (themeSwitch.checked && window.innerWidth > 768) {
+            applyDarkTheme();
         } else {
-            // Light theme
-            document.body.classList.remove('dark-theme');
-            logoImg.src = 'images/logo_blue.jpg'; // Change logo to light theme
+            applyLightTheme();
         }
-    });
+    }
+
+    themeSwitch.addEventListener('change', handleThemeChange);
 
     // Set initial logo based on current theme on page load
-    if (themeSwitch.checked) {
-        logoImg.src = 'images/logo_black.jpg'; // Initial dark theme logo
-    } else {
-        logoImg.src = 'images/logo_blue.jpg'; // Initial light theme logo
-    }
+    handleThemeChange();
+
+    // Check for screen resize to adjust theme
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            applyLightTheme();
+            themeSwitch.checked = false; // Ensure the switch is unchecked on mobile view
+        } else {
+            handleThemeChange();
+        }
+    });
 
 });
