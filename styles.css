@@ -375,42 +375,49 @@ ul {
 }
 
 .service {
-    text-align: center;
-    padding: 30px;
-    height: 350px;
-    width: 100%;
-    box-shadow: 10px 10px 30px rgb(2, 2, 71);
-    background: linear-gradient(135deg,    #327ce5, #327ce5);
+    background: #f9f9f9;
+    padding: 20px;
     border-radius: 10px;
-    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 300px;
+    height: 520px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 30px rgb(2, 2, 71);
     animation: slideInRight 2s ease-out;
 }
 
+.service img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5%;
+    
+}
+
 .service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: white;
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #060e4f;
 }
 
 .service p {
-    text-align: center;
-    font-size: 18px;
-    color: #e9dddd;
+    font-size: 1em;
+    color: #666;
 }
+
+
 
 .service:nth-child(1) {
     animation: slideInLeft 2s ease-out;
-    background: linear-gradient(135deg,    #327ce5, #327ce5);
 }
 
 .service:nth-child(2) {
-    margin-top: 25%;
     box-shadow: 0px 0px 40px rgb(2, 2, 71);
     animation: slideInUp 2s ease-out;
 }
 
 .service:nth-child(3) {
-    margin-top: 25%;
     animation: slideInUp 2s ease-out;
 }
 
@@ -579,9 +586,9 @@ body.dark-theme {
     color: #181c21;
 }
 
-.dark-theme .service {
+/* .dark-theme .service {
     background: linear-gradient(135deg, #181c21, #181c21);
-}
+} */
 
 .dark-theme .contact-info h2 {
     color: #181c21;
