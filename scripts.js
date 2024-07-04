@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandLogo = document.getElementById('brand-logo');
     const sections = document.querySelectorAll('section');
     const homeSection = document.getElementById('home');
+    const themeSwitch = document.getElementById('theme-switch'); // Theme switch input
+    const logoImg = document.getElementById('logo-img'); // Logo image element
 
     // Function to check if an element is in the viewport
     function isInViewport(element) {
@@ -104,4 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add event listener for hash change and page load
     window.addEventListener('hashchange', checkHomePage);
     window.addEventListener('load', checkHomePage);
+
+    // JavaScript for Theme Toggle
+    themeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            // Dark theme
+            document.body.classList.add('dark-theme');
+            logoImg.src = 'images/logo_black.jpg'; // Change logo to dark theme
+        } else {
+            // Light theme
+            document.body.classList.remove('dark-theme');
+            logoImg.src = 'images/logo_blue.jpg'; // Change logo to light theme
+        }
+    });
+
+    // Set initial logo based on current theme on page load
+    if (themeSwitch.checked) {
+        logoImg.src = 'images/logo_black.jpg'; // Initial dark theme logo
+    } else {
+        logoImg.src = 'images/logo_blue.jpg'; // Initial light theme logo
+    }
+
 });
