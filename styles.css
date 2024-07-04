@@ -241,7 +241,7 @@ ul {
     height: 100%;
     border-bottom-right-radius: 90%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    padding-right: 10%;
+    padding-right: 20%;
 }
 
 .hero-content .portfolioScreen {
@@ -312,6 +312,7 @@ ul {
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 20%;
 }
 
 .hero-content .btn:hover {
