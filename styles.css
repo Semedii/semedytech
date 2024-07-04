@@ -28,7 +28,7 @@ ul {
     padding: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    background-color: rgb(49, 124, 229);
+    background-color: #181c21;
     color: white;
     position: fixed;
     width: 100%;
@@ -91,7 +91,7 @@ ul {
         left: 0%;
         width: 100%;
         height: 100vh;
-        background-color: rgb(49, 124, 229);
+        background-color: #181c21;
         text-align: center;
     }
 
@@ -167,7 +167,7 @@ ul {
     text-align: center;
     padding-top: 15%;
     animation: slideInLeft 6s ease-out;
-    background-color: rgb(49, 124, 229);
+    background-color: #181c21;
     color: white;
     width: 55%;
     height: 100%;
@@ -247,7 +247,7 @@ ul {
 }
 
 .hero-content .btn:hover {
-    background-color: #3432c5;
+    background-color: #181c21;
     color: white;
 }
 
@@ -258,14 +258,14 @@ ul {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
 .container h2 {
     font-size: 36px;
-    color: rgb(49, 124, 229);
+    color: #181c21;
     margin-bottom: 20px;
 }
 
@@ -281,7 +281,7 @@ ul {
     .hero-content .description {
         margin-top: 10%;
         width: 100%;
-        color: rgb(49, 124, 229);
+        color: #181c21;
         background-color: white;
     }
     .hero-content {
@@ -311,9 +311,9 @@ ul {
     text-align: center;
     padding: 30px;
     height: 350px;
-    width: 350px;
+    width: 100%;
     box-shadow: 10px 10px 30px rgb(2, 2, 71);
-    background: linear-gradient(135deg,    rgb(40, 109, 204), rgb(78, 144, 236));
+    background: linear-gradient(135deg,    #181c21, #40454a);
     border-radius: 10px;
     margin: 20px 0;
     /* Margin to create space between services */
@@ -336,7 +336,7 @@ ul {
 .service:nth-child(1) {
     z-index: 3;
     animation: slideInLeft 2s ease-out;
-    background: linear-gradient(135deg,   rgb(78, 144, 236), rgb(40, 109, 204));
+    background: linear-gradient(135deg,    #181c21, #40454a);
 }
 
 .service:nth-child(2) {
@@ -347,7 +347,14 @@ ul {
 }
 
 .service:nth-child(3) {
+    margin-top: 25%;
     z-index: 1;
+    animation: slideInUp 2s ease-out;
+}
+
+.service:nth-child(4) {
+    box-shadow: 0px 0px 40px rgb(2, 2, 71);
+    z-index: 3;
     animation: slideInRight 2s ease-out;
 }
 
@@ -396,7 +403,7 @@ ul {
 .contact-info h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: rgb(49, 124, 229);
+    color: #181c21;
 }
 
 .contact-info p {
@@ -411,7 +418,7 @@ ul {
     flex-direction: column;
     gap: 20px;
     text-align: left;
-    background: rgb(49, 124, 229);
+    background: #181c21;
     padding: 40px;
     border-radius: 10px;
     margin-right: 30px;
